@@ -1,136 +1,97 @@
 
-//플러그인 시작
-(function ( $ ) {
-  $.fn.dingsThumb = function(options) {
-    return this.each(function() {
-      var loaded = false;
-      var opts = $.extend( {}, $.fn.dingsThumb.defaults, options );
-      var box = $(this), cover = opts.cover, loading = opts.loading, bg =opts.background, vertical = opts.vertical, horizon =opts.horizon;
-      var img = box.find('img'), src = img.attr('src'), alt = img.attr('alt');
-      function thumbAdjust() {
-        var obj = box.find('img');
-        var boxHeight = box.height(), boxWidth = box.width(), boxRatio = boxHeight / boxWidth;
-        var imgHeight = obj.height(), imgWidth = obj.width(), imgRatio = imgHeight / imgWidth;
-        var referCalc = (imgRatio / boxRatio) > 1, refer = cover === true ? referCalc : !referCalc;
-        box.css({'position' : 'relative', 'overflow' : 'hidden', 'background' : bg});
-        var valuesSize = (function() {
-          var value = [];
-          if (refer === true) {
-            value[0] = '100%';
-            value[1] = 'auto';
-          } else {
-            value[0] = 'auto';
-            value[1] = '100%';
-          }
-          return value;
-        })();
-        obj.css({
-          'position':'absolute',
-          'display':'inline-block',
-          'width':valuesSize[0],
-          'height':valuesSize[1]
-        });
-        var modifiedImgW = obj.width(), modifiedImgH = obj.height();
-        var valuesPosition = (function() {
-          var value = [];
-          if (horizon === 'left') {
-            value[0] = 0;
-          } else if (horizon === 'right') {
-            value[0] = boxWidth - modifiedImgW;
-          } else  {
-            value[0] = (boxWidth / 2) - (modifiedImgW / 2);
-          }
-          if (vertical === 'top') {
-            value[1] = 0;
-          } else if (vertical === 'bottom') {
-            value[1] = boxHeight - modifiedImgH;
-          } else {
-            value[1] = (boxHeight / 2) - (modifiedImgH / 2);
-          }
-          return value;
-        })();
-        obj.css({
-          'top':valuesPosition[1],
-          'left':valuesPosition[0]
-        });
+// GNB 메뉴토글
+$(function() {
+  var $menu = $('.gnb_product');
+  $('.gnb_btn').on('click', function(e) {
+      e.preventDefault();
+      if (!$menu.hasClass('on')) {
+          $menu.addClass('on');
+          $(document).one('click', function closeTooltip(e) {
+              if ($menu.has(e.target).length === 0 && $('.gnb_btn').has(e.target).length === 0) {
+                  $menu.removeClass('on');
+              } else if ($menu.hasClass('on')) {
+                  $(document).one('click', closeTooltip);
+              }
+          });
+      } else {
+          $menu.removeClass('on');
       }
-      function thumbNoloading() {
-        $('<img class="image-adjusted" alt="'+ alt +'">').attr("src", src).load(function() {
-          $(this).appendTo(box).siblings('img').remove();
-          thumbAdjust();
-        });
-      }
-      function thumbLoading() {
-        $('<img class="image-adjusted" alt="'+ alt +'" style="display:none;">').attr("src", src).load(function() {
-          $(this).appendTo(box).fadeIn('fast').siblings('img').remove();
-          thumbAdjust();
-        });
-      }
-      if (loaded === false) {
-        var imageObj = loading === false ? thumbNoloading() : thumbLoading();
-        loaded = true;
-      }
-      $(document).ready(thumbAdjust);
-      $(window).on('load resize', thumbAdjust);
-    });
-  };
-  $.fn.dingsThumb.defaults = {
-      cover : true,
-      loading : false,
-      background : '#fff',
-      vertical : 'center',
-      horizon : 'center'
-  };
-}( jQuery ));
-//플러그인 끝
-
-//--------------------------- 플러그인 끝
-//--------------------------- 플러그인 끝
-
-//--------------------------- 플러그인 실행
-//--------------------------- 플러그인 실행
-
-// $(window).ready(function(){
-  //썸네일 background-size:cover 형태
-  $('.cover').dingsThumb({
-    loading : true,
-    background : '#ccd1da',
-    vertical : 'top',
-    horizon : 'right',
-    background: 'pink'
   });
-  //썸네일안에 이미지 전체 집어넣는 형태
-  $('.nocover').dingsThumb({
-    cover : false,
-    loading : true,
-    background : '#ccd1da',
-    vertical : 'top',
-    horizon : 'right',
-    background: 'pink'
-  });
-// });
-
-//--------------------------- 클릭 이벤트 데모
-//--------------------------- 클릭 이벤트 데모
-
-$(document).on('click', '.btn', function(){
-  var cover = $(this).hasClass('cover');
-  var sourceImg = $(this).find('img').attr('src');
-  var target = $(this).closest('.right').siblings('.left').find('.thumbnail');
-  target.find('img').remove();
-  target.append('<img src="'+sourceImg+'">');
-  if (cover === true) {
-    target.dingsThumb();
-  } else {
-    target.dingsThumb({
-      cover : false,
-      loading : true,
-      background : '#ccd1da',
-      vertical : 'top',
-      horizon : 'right',
-      background: 'pink'
-    });
-  }
 });
 
-//리사이즈 오류 수정중
+$(window).scroll(function(){
+  var ele = $('.header');
+  var win = $(window).scrollTop();
+  win !== 0 ? ele.addClass('active') : ele.removeClass('active');
+});
+// //페이지 로드시 커버 이미지 삽입
+$(function() {
+  var source = $('.source_cover');
+  var img = source.length > 0;
+  if (img === true) {
+    var origin = source.attr('src');
+    $('<img/>').attr('src', origin).load(function() {
+      var src = $(this).attr('src');
+      var source = 'url(' + src + ')';
+      $('.cover').css('background-image', source);
+      $('.wrap').addClass('loaded');
+    });
+  } else {
+    $('.wrap').addClass('loaded');
+    $('.slogan').find('p').addClass('loaded');
+  }
+});
+$('.moveLink').click(function(e){
+  e.preventDefault();
+  var width = $(window).width();
+  var gap = width < 992 ? 0 : $('header').height();
+  var href= $(this).attr('href');
+  var target = href.replace('#','');
+  var offset = $('#'+target+'').offset().top;
+  var moveAmount = offset - gap;
+  var body = $("html, body");
+  body.stop().animate({scrollTop:moveAmount}, 500, 'swing');
+});
+$('.mobile_opener').click(function(){
+  $('header').addClass('opened');
+});
+$('.mobile_closer').click(function(){
+  $('header').removeClass('opened');
+});
+
+//--------------------------- 데모
+//--------------------------- 데모
+$('.demo1').dingsThumb();
+$('.demo2').dingsThumb({
+  cover : false
+});
+$('.demo3').dingsThumb({
+  loading : true
+});
+$('.demo4').dingsThumb({
+  cover : false,
+  background : '#a3d553'
+});
+$('.demo5').dingsThumb({
+  cover : false,
+  vertical : 'bottom'
+});
+$('.demo6').dingsThumb({
+  cover : false,
+  horizon : 'right'
+});
+$(document).on('click', '.reload', function(){
+  var cover = $(this);
+  var thumbnail = $('.demo3');
+  var img = thumbnail.find('.image-adjusted');
+  img.unwrap('div');
+  thumbnail.dingsThumb({
+    loading : true
+  });
+});
+// $(window).on('load resize', function(){
+//   $('pre, code').each(function(){
+//     var width = $('.intro_desc').innerWidth();
+//     // $(this).width(width);
+//   });
+// });

@@ -3,125 +3,425 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>테스트</title>
+        <title>dingsThumb</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=no">
+
         <meta name="title" content="ICONSKETCH">
-        <meta name="description" content="웹크리에이터 목선웅 개인 웹사이트입니다. 소개, 연락처 포트폴리오를 포함하고 있습니다.">
-        <meta name="keywords" content="목선웅, 개인, 웹사이트, PR, 소개, 포트폴리오, 연락처">
-        <link rel="stylesheet" href="./style.css">
+        <meta name="description" content="비즈관련 수공예 상품 전문 쇼핑몰입니다.">
+        <link rel="stylesheet" href="./css/normalize.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/font-awesome.min.css">
+        <link rel="stylesheet" href="./plugin/styles/default.css">
+        <link rel="stylesheet" href="./plugin/styles/dracula.css">
+        <script src="./plugin/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
         <script src="./js/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-      <div class="wrapper">
-          <!-- 첫줄 데모 -->
-          <div class="demo1">
-              <h2>데모1 <small>커버모드 - 버튼이 가로형임</small></h2>
-              <div class="left">
-                  <div class="thumbnail">
-                      <img src="https://dummyimage.com/400x500/46aede/fff.png&text=image" alt="">
-                  </div>
-              </div>
-              <div class="right">
-                  <div class="controller">
-                      <button class="btn landscape cover">
-                          <img src="https://images.pexels.com/photos/212941/pexels-photo-212941.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                          <span>커버모드 - 가로형 이미지</span>
-                      </button>
-                      <button class="btn landscape cover">
-                          <img src="https://images.pexels.com/photos/212942/pexels-photo-212942.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                          <span>커버모드 - 세로형 이미지</span>
-                      </button>
-                      <button class="btn landscape cover">
-                          <img src="https://dummyimage.com/400x400/d64651/fff.png" alt="">
-                          <span>커버모드 - 정사각형 이미지</span>
-                      </button>
-                  </div>
-              </div>
-          </div>
-          <!--/ 첫줄 데모 -->
-          <!-- 두번째줄 데모 -->
-          <div class="demo2">
-              <h2>데모2 <small>커버모드아님 - 버튼이 가로형임</small></h2>
-              <div class="left">
-                  <div class="thumbnail">
-                      <img src="https://dummyimage.com/400x500/46aede/fff.png&text=image" alt="">
-                  </div>
-              </div>
-              <div class="right">
-                  <div class="controller">
-                      <button class="btn landscape nocover">
-                          <img src="https://images.pexels.com/photos/212941/pexels-photo-212941.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                          <span>노커버모드 - 가로형 이미지</span>
-                      </button>
-                      <button class="btn landscape nocover">
-                          <img src="https://images.pexels.com/photos/212942/pexels-photo-212942.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                          <span>노커버모드 - 세로형 이미지</span>
-                      </button>
-                      <button class="btn landscape nocover">
-                          <img src="https://dummyimage.com/400x400/d64651/fff.png" alt="">
-                          <span>노커버모드 - 정사각형 이미지</span>
-                      </button>
-                  </div>
-              </div>
-          </div>
-          <!--/ 두번째줄 데모 -->
-          <!-- 세번째줄 데모 -->
-          <div class="demo3">
-              <h2>데모3 <small>커버모드 - 버튼이 세로형임</small></h2>
-              <div class="left">
-                  <div class="thumbnail">
-                      <img src="https://dummyimage.com/400x500/46aede/fff.png&text=image" alt="">
-                  </div>
-              </div>
-              <div class="right">
-                  <div class="controller">
-                      <button class="btn portrait cover">
-                          <img src="https://images.pexels.com/photos/212941/pexels-photo-212941.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                          <span>커버모드 - 가로형 이미지</span>
-                      </button>
-                      <button class="btn portrait cover">
-                          <img src="https://images.pexels.com/photos/212942/pexels-photo-212942.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                          <span>커버모드 - 세로형 이미지</span>
-                      </button>
-                      <button class="btn portrait cover">
-                          <img src="https://dummyimage.com/400x400/d64651/fff.png" alt="">
-                          <span>커버모드 - 정사각형 이미지</span>
-                      </button>
-                  </div>
-              </div>
-          </div>
-          <!--/ 세번째줄 데모 -->
-          <!-- 네번째줄 데모 -->
-          <div class="demo4">
-              <h2>데모4 <small>커버모드아님 - 버튼이 세로형임</small></h2>
-              <div class="left">
-                  <div class="thumbnail">
-                      <img src="https://dummyimage.com/400x500/46aede/fff.png&text=image" alt="">
-                  </div>
-              </div>
-              <div class="right">
-                  <div class="controller">
-                      <button class="btn portrait nocover">
-                          <img src="https://images.pexels.com/photos/212941/pexels-photo-212941.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                          <span>노커버모드 - 가로형 이미지</span>
-                      </button>
-                      <button class="btn portrait nocover">
-                          <img src="https://images.pexels.com/photos/212942/pexels-photo-212942.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                          <span>노커버모드 - 세로형 이미지</span>
-                      </button>
-                      <button class="btn portrait nocover">
-                          <img src="https://dummyimage.com/400x400/d64651/fff.png" alt="">
-                          <span>노커버모드 - 정사각형 이미지</span>
-                      </button>
-                  </div>
-              </div>
-          </div>
-          <!--/ 네번째줄 데모 -->
-      </div>
+        <div class="wrap" id="home">
+            <div class="mobile_opener">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <header class="header">
+                <div class="mobile_closer">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="inner">
+                    <h1 class="logo">
+                        <a href="#home" class="moveLink">
+                          dingsThumb
+                        </a>
+                    </h1>
+                    <a href="#home" class="gnb_btn moveLink home">
+                        <i class="fa fa-home" aria-hidden="true"></i>Home
+                    </a>
+                    <nav class="gnb_product">
+                        <button class="gnb_btn">
+                            Docs<i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </button>
+                        <ul class="list_product" id="navi">
+                            <li>
+                                <a href="#intro" class="moveLink">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>Getting started
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#options" class="moveLink">
+                                    <i class="fa fa-code" aria-hidden="true"></i>Options
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#demos" class="moveLink">
+                                    <i class="fa fa-mouse-pointer" aria-hidden="true"></i>Demos
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="gnb_btn download">Download</a>
 
+                    <div class="mall_ui">
+                        <div class="btn_login">
+                            <a href="#">Github</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="top_cover">
+                <div class="cover">
+                    <img src="./images/hero/index2.jpg" alt="" class="source_cover hidden">
+                </div>
+                <div class="cover_desc">
+                    <div class="cover_desc_inner">
+                        <div class="cover_desc_box">
+                            <p class="heading">
+                                dingsThumb
+                            </p>
+                            <p class="small">
+                                썸네일 이미지의 포지셔닝과 썸네일 박스와 이미지의 비율을 고려한 다양한 옵션을 제공합니다.
+                            </p>
+                            <div class="btn_area">
+                                <a href="#demos" class="btn_cover moveLink">
+                                    예제보러가기
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main class="contents">
+              <div class="inner">
+                  <section id ="intro">
+                      <h3 class="section_title">
+                          Getting started
+                      </h3>
+                      <div class="intro">
+                        <div class="intro_item">
+                            <h4>
+                                플러그인 소개
+                            </h4>
+                            <div class="intro_desc">
+                                익스플로러8에서 작동되지 않는 background-size:cover; 의 기능을 ie8에서도 사용할 수 있도록 하기 위해 개발하였습니다. 이미지의 width와 height, 위치값은 absolute, top, left 만으로 컨트롤 하므로 하위브라우저에서도 background-size:cover; 와 같은 기능을 제공할 수 있을 것으로 기대합니다. 그 외에도 썸네일 배경, 로딩효과, 위치 설정 등의 다양한 옵션을 함께 제공합니다.
+                            </div>
+                        </div>
+                        <div class="intro_item">
+                            <h4>
+                                사용법
+                            </h4>
+                            <div class="intro_desc">
+                                <ol>
+                                    <li>
+                                        <div class="intro_desc_text">
+                                            1. body의 끝 부분에 .js 파일을 모두 링크합니다. jQuery를 기반으로 제작한 플러그인이므로, 제이쿼리를 먼저 링크합니다.
+                                        </div>
+<pre><code class="xml">&lt;script src="/your_path/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="/your_path/dingsThumb.min.js"&gt;&lt;/script&gt;</code></pre>
+                                    </li>
+                                    <li>
+                                        <div class="intro_desc_text">
+                                            2. jQuery와 plugin 파일이 연결되었다면, 플러그인을 호출합니다. 플러그인을 적용할 엘리먼트에 플러그인 함수를 호출하여 사용합니다. 사용자 정의 및 옵션 사용법은 아래의 데모를 참조하세요.
+                                        </div>
+<pre><code>$(document).ready(function(){
+  $(".elements").dingsThumb();
+});</code></pre>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                      </div>
+                  </section>
+
+                  <section id="options">
+                      <h3 class="section_title">
+                          Options
+                      </h3>
+                      <div class="options">
+                          <ul>
+                              <li>
+                                  <h4>cover</h4>
+                                  <p>
+                                      <span class="option_tit">타입 : </span>
+                                      <span class="option_content">Boolean</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_tit">기본 : </span>
+                                      <span class="option_content">true</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_desc">true 사용시 상자와 이미지의 크기, 비율에 상관없이 언제나 상자가 가득찬 모습으로 보입니다. 이 때, 비율상 상자에 넘치는 이미지는 가려집니다. false 사용시 이미지 이미지의 잘리는 영역이 없이 이미지의 모든 부분이 상자 안으로 들어갑니다.</span>
+                                  </p>
+                              </li>
+                              <li>
+                                  <h4>loading</h4>
+                                  <p>
+                                      <span class="option_tit">타입 : </span>
+                                      <span class="option_content">Boolean</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_tit">기본 : </span>
+                                      <span class="option_content">false</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_desc">loading 옵션을 true로 설정하면 이미지가 로드될 때 fadeIn 애니메이션 효과가 발생합니다. 다만, 플러그인은 DOM이 모두 렌더링 한 후에 작동하므로 이미지가 반짝 보여지는 일이 없도록 하려면, 이 옵션을 사용하기 전에 CSS를 통해 미리 이미지를 display:none;으로 설정하는 것이 좋습니다. </span>
+                                  </p>
+                              </li>
+                              <li>
+                                  <h4>background</h4>
+                                  <p>
+                                      <span class="option_tit">타입 : </span>
+                                      <span class="option_content">String</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_tit">기본 : </span>
+                                      <span class="option_content">#fff</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_desc">cover 옵션이 false일 때, 상자와 이미지의 비율이 동일하지 않으면 상자에 여백이 생기는데, 그 여백의 색상을 조절할 필요가 있다면 이 옵션을 사용합니다. 브라우저가 읽을 수 있는 헥스코드나 색상명, RGB 등을 문자형태로 사용합니다. </span>
+                                  </p>
+                              </li>
+                              <li>
+                                  <h4>vertical</h4>
+                                  <p>
+                                      <span class="option_tit">타입 : </span>
+                                      <span class="option_content">String</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_tit">기본 : </span>
+                                      <span class="option_content">center</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_desc">이미지가 수직 방향으로 정렬될 위치를 선정합니다. 상단으로는 top, 중간으로는 center, 하단으로는 bottom을 사용할 수 있습니다.</span>
+                                  </p>
+                              </li>
+                              <li>
+                                  <h4>horizon</h4>
+                                  <p>
+                                      <span class="option_tit">타입 : </span>
+                                      <span class="option_content">String</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_tit">기본 : </span>
+                                      <span class="option_content">center</span>
+                                  </p>
+                                  <p>
+                                      <span class="option_desc">이미지가 수평 방향으로 정렬될 위치를 선정합니다. 좌측으로는 left, 중간으로는 center, 우측으로는 bottom을 사용할 수 있습니다.</span>
+                                  </p>
+                              </li>
+                          </ul>
+                      </div>
+
+                  </section>
+
+                <section id="demos">
+                    <h3 class="section_title">
+                      Demos
+                    </h3>
+                    <div class="wrap_list">
+                        <ul class="list_pd">
+                            <li>
+                                <div class="pd_item">
+                                    <div class="pd_thumb">
+                                        <div class="pd_image demo1">
+                                            <img src="https://images.unsplash.com/photo-1508108712903-49b7ef9b1df8?dpr=1&auto=format&fit=crop&w=568&h=379&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" class="pd_img_source hidden">
+                                        </div>
+                                        <div class="pd_announce">
+                                            <span class="sale">default</span>
+                                            <!-- <span class="soldout">Sold Out</span> -->
+                                        </div>
+                                        <div class="pd_overlay">
+                                            <div class="pd_overlay_inner">
+                                                <a href="https://images.unsplash.com/photo-1508108712903-49b7ef9b1df8?dpr=1&auto=format&fit=crop&w=568&h=379&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" target="_blank" class="btn_show">
+                                                    <span class="pd_show">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="desc_top">
+                                        <span class="option_strong">Option 기본값</span>
+                                    </div>
+<pre><code>$('.demo1').dingsThumb();</code></pre>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="pd_item">
+                                    <div class="pd_thumb">
+                                        <div class="pd_image demo2">
+                                            <img src="https://images.unsplash.com/photo-1505899823904-b58e10d5231a?dpr=1&auto=format&fit=crop&w=568&h=803&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" class="pd_img_source hidden">
+                                        </div>
+                                        <div class="pd_announce">
+                                            <span class="sale">cover</span>
+                                            <!-- <span class="soldout">Sold Out</span> -->
+                                        </div>
+                                        <div class="pd_overlay">
+                                            <div class="pd_overlay_inner">
+                                                <a href="https://images.unsplash.com/photo-1505899823904-b58e10d5231a?dpr=1&auto=format&fit=crop&w=568&h=803&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" target="_blank" class="btn_show">
+                                                    <span class="pd_show">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="desc_top">
+                                        <span class="option_strong">cover : false</span><br />
+                                        cover 옵션을 끔으로써 이미지가 모든 부분이 상자 안으로 들어갑니다.
+                                    </div>
+<pre><code>$('.demo2').dingsThumb({
+    cover : false
+});</code></pre>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="pd_item">
+                                    <div class="pd_thumb">
+                                        <div class="pd_image demo3">
+                                            <img src="https://images.unsplash.com/photo-1506395308321-904a71783d60?dpr=1&auto=format&fit=crop&w=568&h=861&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" class="pd_img_source hidden">
+                                        </div>
+                                        <div class="pd_announce">
+                                            <span class="sale">loading</span>
+                                            <!-- <span class="soldout">Sold Out</span> -->
+                                        </div>
+                                        <div class="pd_overlay">
+                                            <div class="pd_overlay_inner">
+                                                <a href="https://images.unsplash.com/photo-1506395308321-904a71783d60?dpr=1&auto=format&fit=crop&w=568&h=861&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" target="_blank" class="btn_show">
+                                                    <span class="pd_show">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="desc_top">
+                                        <span class="option_strong">loading : true</span><br />
+                                        이미지가 로드될 때 fadeIn 애니메이션 효과가 발생합니다.
+                                        <button class="reload">다시 로드하기</button>
+                                    </div>
+<pre><code>$('.demo3').dingsThumb({
+    loading : true
+});</code></pre>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="pd_item">
+                                    <div class="pd_thumb">
+                                        <div class="pd_image demo4">
+                                            <img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?dpr=1&auto=format&fit=crop&w=568&h=852&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" class="pd_img_source hidden">
+                                        </div>
+                                        <div class="pd_announce">
+                                            <span class="sale">background</span>
+                                            <!-- <span class="soldout">Sold Out</span> -->
+                                        </div>
+                                        <div class="pd_overlay">
+                                            <div class="pd_overlay_inner">
+                                                <a href="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?dpr=1&auto=format&fit=crop&w=568&h=852&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" target="_blank" class="btn_show">
+                                                    <span class="pd_show">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="desc_top">
+                                        <span class="option_strong">background : '#a3d553'</span><br />
+                                        상자와 이미지의 비율이 동일하지 않아서 나타나는 여백에 배경색을 입힙니다. 헥스코드 '#a3d553'를 입력해 초록계열 배경을 만듭니다. 이 에제에서는 옵션의 효과를 잘 표현하기 위해 cover 옵션을 false로 하여 여백이 나타나도록 했습니다.
+                                    </div>
+<pre><code>$('.demo4').dingsThumb({
+    cover : false,
+    background : '#a3d553'
+});</code></pre>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="pd_item">
+                                    <div class="pd_thumb">
+                                        <div class="pd_image demo5">
+                                            <img src="https://images.unsplash.com/photo-1444021907648-1baf30e38d9e?dpr=1&auto=format&fit=crop&w=568&h=200&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" class="pd_img_source hidden">
+                                        </div>
+                                        <div class="pd_announce">
+                                            <span class="sale">vertical</span>
+                                            <!-- <span class="soldout">Sold Out</span> -->
+                                        </div>
+                                        <div class="pd_overlay">
+                                            <div class="pd_overlay_inner">
+                                                <a href="https://images.unsplash.com/photo-1444021907648-1baf30e38d9e?dpr=1&auto=format&fit=crop&w=568&h=200&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" target="_blank" class="btn_show">
+                                                    <span class="pd_show">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="desc_top">
+                                        <span class="option_strong">vertical : 'bottom'</span><br />
+                                        이미지의 수직방향 정렬을 bottom, 즉 아래로 설정합니다. 이렇게하면 이미지의 아랫부분을 중심으로 나타냅니다. 비율에 따라 cover 옵션을 사용할 때나 사용하지 않을 때 모두 작동합니다. 이 에제에서는 옵션의 효과를 잘 표현하기 위해 cover 옵션을 false로 하여 여백이 나타나도록 했습니다.
+                                    </div>
+<pre><code>$('.demo5').dingsThumb({
+    cover : false,
+    vertical : 'bottom'
+});</code></pre>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="pd_item">
+                                    <div class="pd_thumb">
+                                        <div class="pd_image demo6">
+                                            <img src="https://images.unsplash.com/photo-1481824429379-07aa5e5b0739?dpr=1&auto=format&fit=crop&w=568&h=833&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" class="pd_img_source hidden">
+                                        </div>
+                                        <div class="pd_announce">
+                                            <span class="sale">horizon</span>
+                                            <!-- <span class="soldout">Sold Out</span> -->
+                                        </div>
+                                        <div class="pd_overlay">
+                                            <div class="pd_overlay_inner">
+                                                <a href="https://images.unsplash.com/photo-1481824429379-07aa5e5b0739?dpr=1&auto=format&fit=crop&w=568&h=833&q=60&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" target="_blank" class="btn_show">
+                                                    <span class="pd_show">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="desc_top">
+                                        <span class="option_strong">horizon : 'right'</span><br />
+                                        이미지의 수평방향 정렬을 right, 즉 오른쪽으로 설정합니다. 이렇게하면 이미지의 오른쪽 부분을 중심으로 나타냅니다. 비율에 따라 cover 옵션을 사용할 때나 사용하지 않을 때 모두 작동합니다. 이 에제에서는 옵션의 효과를 잘 표현하기 위해 cover 옵션을 false로 하여 여백이 나타나도록 했습니다.
+                                    </div>
+<pre><code>$('.demo6').dingsThumb({
+    cover : false,
+    horizon : 'right'
+});</code></pre>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </section>
+              </div>
+            </main>
+        </div>
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-        <!-- <script>window.jQuery || document.write('<script src="./js/jquery-1.11.2.min.js"><\/script>')</script> -->
-        <script src="./js/jquery-1.11.2.min.js"></script>
+        <script>window.jQuery || document.write('<script src="./js/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="./js/dingsThumb.js"></script>
+        <!-- <script src="./plugin/highlight.pack.js"></script> -->
         <script src="./js/main.js"></script>
     </body>
 </html>
