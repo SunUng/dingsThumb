@@ -10,7 +10,6 @@
         boxHeight = box.height(), boxWidth = box.width();
         thumb.width(boxWidth).height(boxHeight);
         var boxRatio = boxHeight / boxWidth;
-        // obj.parent().width(boxWidth).height(boxHeight);
         var imgHeight = obj.height(), imgWidth = obj.width(), imgRatio = imgHeight / imgWidth;
         var referCalc = (imgRatio / boxRatio) > 1, refer = cover === true ? referCalc : !referCalc;
         var valuesSize = (function() {
