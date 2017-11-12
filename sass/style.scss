@@ -1211,6 +1211,9 @@ section {
     .intro_desc li {
       overflow:hidden;
     }
+    .social_inner {
+      padding: 3%;
+    }
 }
 @include mq($until: mobile) {
     .xxx {background: yellow}
