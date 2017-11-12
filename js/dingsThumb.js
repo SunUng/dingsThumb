@@ -60,8 +60,8 @@
         });
       }
       function thumbLoading() {
-        $('<img class="image-adjusted" alt="'+ alt +'" style="display:none;" class="'+ cls +'">').attr("src", src).load(function() {
-          $(this).appendTo(thumb).fadeIn('fast').siblings('img').remove();
+        $('<img class="image-adjusted loaded" alt="'+ alt +'" style="display:none;" class="'+ cls +'">').attr("src", src).load(function() {
+          $(this).appendTo(thumb).fadeIn('slow').siblings('img').remove();
           thumbAdjust();
         });
       }
