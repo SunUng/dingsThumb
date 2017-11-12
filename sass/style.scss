@@ -252,7 +252,7 @@ body {
     width:100%;
   }
 }
-.gnb_btn.home i {
+.gnb_btn.home i, .gnb_btn.owner i {
   display:none;
 }
 .gnb_product {
@@ -1125,7 +1125,7 @@ section {
     .gnb_btn i {
       margin-left:0;
     }
-    .gnb_btn.home i {
+    .gnb_btn.home i, .gnb_btn.owner i {
       display: inline-block;
       width: 16px;
       font-size: 16px;
