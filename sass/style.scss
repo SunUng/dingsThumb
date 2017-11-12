@@ -1034,6 +1034,29 @@ section {
     color:black;
   }
 }
+#social {
+  width:100%;
+}
+.social_inner {
+  width:100%;
+  padding: 20px;
+  float: left;
+  background: #484848;
+  border-radius: 4px;
+}
+.footer {
+  text-align:center;
+  font-size:10px;
+  color:#fff;
+  background:#484848;
+  line-height:40px;
+  border-top:1px solid rgba(0,0,0,0.1);
+  float:left;
+  width:100%;
+  letter-spacing:1px;
+  font-weight:normal;
+  margin-top:5%;
+}
 @include mq($from: desktop, $until: wide) {
 }
 @include mq($until: wide) {
