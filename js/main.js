@@ -2,7 +2,7 @@
 // GNB 메뉴토글
 $(function() {
   var $menu = $('.gnb_product');
-  $('.gnb_btn').on('click', function(e) {
+  $('.gnb_btn').not('.download').on('click', function(e) {
       e.preventDefault();
       if (!$menu.hasClass('on')) {
           $menu.addClass('on');
