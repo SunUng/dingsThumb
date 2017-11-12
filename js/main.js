@@ -73,10 +73,12 @@ $('.demo4').dingsThumb({
   background : '#a3d553'
 });
 $('.demo5').dingsThumb({
+  background : '#e85764',
   cover : false,
   vertical : 'bottom'
 });
 $('.demo6').dingsThumb({
+  background : '#fdd030',
   cover : false,
   horizon : 'right'
 });
