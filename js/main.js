@@ -54,9 +54,11 @@ $('.moveLink').click(function(e){
 });
 $('.mobile_opener').click(function(){
   $('header').addClass('opened');
+  $('body').addClass('navi_opened');
 });
-$('.mobile_closer').click(function(){
+$('.mobile_closer, .mobile_closer_bg').click(function(){
   $('header').removeClass('opened');
+  $('body').removeClass('navi_opened');
 });
 
 //--------------------------- 데모
