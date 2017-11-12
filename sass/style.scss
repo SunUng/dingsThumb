@@ -91,6 +91,7 @@ body {
   height:100%;
   overflow-y:scroll;
   background:#353535;
+  font-weight:300;
 }
 .unselectable, .unselectable * { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; }
 .hidden {
@@ -690,6 +691,7 @@ section {
   border-radius:4px;
   color:#fff;
   float:left;
+  font-weight:300;
   & h4 {
     font-size:30px;
     font-weight:300;
@@ -703,6 +705,9 @@ section {
   & p {
     font-size:15px;
   }
+}
+section {
+  font-weight:300;
 }
 .option_content {
   background: #353535;
@@ -978,6 +983,26 @@ section {
     }
   }
 }
+.intro pre, .intro pre *, .intro code, .intro code * {
+  // width:250px;
+  font-size:12px;
+  white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+  white-space: -pre-wrap; /* Opera */
+  white-space: -o-pre-wrap; /* Opera */
+  white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+  word-wrap: break-word; /* IE 5.5+ */
+}
+.copyright {
+  font-weight:300;
+  line-height:1.5;
+  font-size:13px;
+  color:#adb7be;
+}
+.code_title {
+  background: #353535;
+  padding: 3px 5px;
+  border-radius: 2px;
+}
 .xxx {
   position:fixed;
   display:inline-block;
@@ -1104,6 +1129,9 @@ section {
     .intro h4 {
       font-size:20px;
     }
+    .sourcecode {
+      display:none;
+    }
 
 }
 @include mq($until: tablet) {
@@ -1141,16 +1169,6 @@ section {
     .intro_desc li {
       overflow:hidden;
     }
-    .intro pre, .intro pre *, .intro code, .intro code * {
-      // width:250px;
-      overflow: scroll;
-      white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
-      white-space: -pre-wrap; /* Opera */
-      white-space: -o-pre-wrap; /* Opera */
-      white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
-      word-wrap: break-word; /* IE 5.5+ */
-    }
-
 }
 @include mq($until: mobile) {
     .xxx {background: yellow}
