@@ -206,20 +206,20 @@
         });
       }
       function thumbNoloading() {
-        $('<img class="image-adjusted" alt="'+ alt +'" class="'+ cls +'">').attr("src", src).load(function() {
+        $('&lt;img class="image-adjusted" alt="'+ alt +'" class="'+ cls +'"&gt;').attr("src", src).load(function() {
           $(this).appendTo(thumb).siblings('img').remove();
           thumbAdjust();
         });
       }
       function thumbLoading() {
-        $('<img class="image-adjusted loaded" alt="'+ alt +'" style="display:none;" class="'+ cls +'">').attr("src", src).load(function() {
+        $('&lt;img class="image-adjusted loaded" alt="'+ alt +'" style="display:none;" class="'+ cls +'"&gt;').attr("src", src).load(function() {
           $(this).appendTo(thumb).fadeIn('slow').siblings('img').remove();
           thumbAdjust();
         });
       }
       if (loaded === false) {
         var imageObj = loading === false ? thumbNoloading() : thumbLoading();
-        var source = $('<div class="thumb-wrapper"></div>').css({'position' : 'relative', 'overflow' : 'hidden', 'background' : bg, 'width' : boxWidth, 'height' : boxHeight});
+        var source = $('&lt;div class="thumb-wrapper"&gt;&lt;/div&gt;').css({'position' : 'relative', 'overflow' : 'hidden', 'background' : bg, 'width' : boxWidth, 'height' : boxHeight});
         box.wrapInner(source);
         var thumb = box.find('.thumb-wrapper');
         loaded = true;
@@ -239,9 +239,7 @@
                             </div>
                             <div class="intro_desc sourcecode">
                                 <span class="code_title">dingsThumb.min.js</span>
-<pre><code>(function(a){a.fn.dingsThumb=function(r){return this.each(function(){function e(){var a=d.find("img");f=d.height();g=d.width();m.width(g).height(f);var c=f/g,b=a.height(),e=a.width();c=1<b/e/c;var h=!0===t?c:!c;c=function(){var a=[];!0===h?(a[0]="100%",a[1]="auto"):(a[0]="auto",a[1]="100%");return a}();a.css({position:"absolute",display:"inline-block",width:c[0],height:c[1]});var k=a.width(),l=a.height();c=function(){var a=[];a[0]="left"===n?0:"right"===n?g-k:g/2-k/2;a[1]="top"===p?0:"bottom"===p?
-f-l:f/2-l/2;return a}();a.css({top:c[1],left:c[0]})}function u(){a('<img class="image-adjusted" alt="'+k+'" class="'+l+'">').attr("src",q).load(function(){a(this).appendTo(m).siblings("img").remove();e()})}function v(){a('<img class="image-adjusted" alt="'+k+'" style="display:none;" class="'+l+'">').attr("src",q).load(function(){a(this).appendTo(m).fadeIn("slow").siblings("img").remove();e()})}var h=!1,b=a.extend({},a.fn.dingsThumb.defaults,r),d=a(this),f=d.height(),g=d.width(),t=b.cover,w=b.loading,
-x=b.background,p=b.vertical,n=b.horizon;b=d.find("img");var q=b.attr("src"),k=b.attr("alt"),l=b.attr("class");if(!1===h){!1===w?u():v();h=a('<div class="thumb-wrapper"></div>').css({position:"relative",overflow:"hidden",background:x,width:g,height:f});d.wrapInner(h);var m=d.find(".thumb-wrapper");h=!0}a(document).ready(e);a(window).on("load resize",e)})};a.fn.dingsThumb.defaults={cover:!0,loading:!1,background:"#fff",vertical:"center",horizon:"center"}})(jQuery);
+<pre><code>(function(a){a.fn.dingsThumb=function(r){return this.each(function(){function e(){var a=d.find("img");f=d.height();g=d.width();m.width(g).height(f);var c=f/g,b=a.height(),e=a.width();c=1&lt;b/e/c;var h=!0===t?c:!c;c=function(){var a=[];!0===h?(a[0]="100%",a[1]="auto"):(a[0]="auto",a[1]="100%");return a}();a.css({position:"absolute",display:"inline-block",width:c[0],height:c[1]});var k=a.width(),l=a.height();c=function(){var a=[];a[0]="left"===n?0:"right"===n?g-k:g/2-k/2;a[1]="top"===p?0:"bottom"===p?f-l:f/2-l/2;return a}();a.css({top:c[1],left:c[0]})}function u(){a('&lt;img class="image-adjusted" alt="'+k+'" class="'+l+'"&gt;').attr("src",q).load(function(){a(this).appendTo(m).siblings("img").remove();e()})}function v(){a('&lt;img class="image-adjusted" alt="'+k+'" style="display:none;" class="'+l+'"&gt;').attr("src",q).load(function(){a(this).appendTo(m).fadeIn("fast").siblings("img").remove();e()})}var h=!1,b=a.extend({},a.fn.dingsThumb.defaults,r),d=a(this),f=d.height(),g=d.width(),t=b.cover,w=b.loading,x=b.background,p=b.vertical,n=b.horizon;b=d.find("img");var q=b.attr("src"),k=b.attr("alt"),l=b.attr("class");if(!1===h){!1===w?u():v();h=a('&lt;div class="thumb-wrapper"&gt;&lt;/div&gt;').css({position:"relative",overflow:"hidden",background:x,width:g,height:f});d.wrapInner(h);var m=d.find(".thumb-wrapper");h=!0}a(document).ready(e);a(window).on("load resize",e)})};a.fn.dingsThumb.defaults={cover:!0,loading:!1,background:"#fff",vertical:"center",horizon:"center"}})(jQuery);
 </code></pre>
                             </div>
 
@@ -580,7 +578,7 @@ x=b.background,p=b.vertical,n=b.horizon;b=d.find("img");var q=b.attr("src"),k=b.
                         this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
                         this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                         };
-                        */
+                        
                         (function() { // DON'T EDIT BELOW THIS LINE
                         var d = document, s = d.createElement('script');
                         s.src = 'https://iconsketch.disqus.com/embed.js';
@@ -603,5 +601,14 @@ x=b.background,p=b.vertical,n=b.horizon;b=d.find("img");var q=b.attr("src"),k=b.
         <!-- <script src="./plugin/highlight.pack.js"></script> -->
         <script src="./js/main.min.js"></script>
         <script id="dsq-count-scr" src="//iconsketch.disqus.com/count.js" async></script>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107193395-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-107193395-1');
+        </script>
     </body>
 </html>
